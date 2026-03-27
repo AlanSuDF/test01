@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Docker Test</title></head>
+<body>
+    <h1>Docker Compose 基準測試</h1>
+    <button onclick="testApi()">呼叫 API</button>
+    <p id="result">等待測試...</p>
+
+    <script>
+        async function testApi() {
+            try {
+                // 注意：瀏覽器呼叫需使用 localhost 或主機 IP
+                const res = await fetch('http://localhost:8080');
+                const data = await res.json();
+                document.getElementById('result').innerText = 'API 回傳: ' + JSON.stringify(data);
+            } catch (e) {
+                document.getElementById('result').innerText = '連線失敗: ' + e;
+            }
+        }
+    </script>
+</body>
+</html>
