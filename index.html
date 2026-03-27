@@ -13,7 +13,7 @@
         async function testApi() {
             try {
                 // 注意：瀏覽器呼叫需使用 localhost 或主機 IP
-                const res = await fetch('http://localhost:8080');
+                const res = await fetch('https://zc4i8ww8yjgh762tg6t4j530.apps.zerozero.tw/');
                 const data = await res.json();
                 document.getElementById('result').innerText = 'API 回傳: ' + JSON.stringify(data);
             } catch (e) {
