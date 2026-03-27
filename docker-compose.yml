@@ -24,7 +24,7 @@ services:
           env: { db: process.env.DB_HOST, redis: process.env.REDIS_HOST }
         }));
       });
-      server.listen(8080, () => console.log('API listening on 8000'));
+      server.listen(8000, () => console.log('API listening on 8000'));
       "
     depends_on:
       - db
