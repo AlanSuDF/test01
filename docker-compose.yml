@@ -12,8 +12,6 @@ services:
       - DATABASE_URL=postgres://user:password@db:5432/mydb
       - REDIS_URL=redis://redis:6379
       - SERVICE_URL_API_8000
-    expose:
-      - "8000"
     command: >
       node -e "
       const http = require('http');
