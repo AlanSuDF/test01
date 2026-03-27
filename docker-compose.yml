@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   web:
-    image: nginx:alpine
-    volumes:
-      - ./index.html:/usr/share/nginx/html/index.html
+    build:
+      context: .
+      dockerfile: Dockerfile.web
 
   api:
     image: node:24-alpine
